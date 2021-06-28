@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  hackerbaytask:
+    image: hackerbaytask
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    env_file: .env
+    ports:
+      - 3005:3005
